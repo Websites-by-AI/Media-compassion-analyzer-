@@ -205,7 +205,7 @@ const YoutubeAnalyzer: React.FC = () => {
   const [apiKey, setApiKey]       = useState<string>(() => { try { return localStorage.getItem(LS_KEY) || ''; } catch { return ''; } });
   const [showQuota, setShowQuota] = useState(false);
   const [mode, setMode]           = useState<'youtube'|'text'>('youtube');
-  const [youtubeUrl, setYoutubeUrl] = useState('');
+  const [youtubeUrl, setYoutubeUrl] = useState('https://m.youtube.com/watch?v=0O6tN4gTTIE');
   const [manualText, setManualText] = useState('');
   const [isLoading, setIsLoading]   = useState(false);
   const [error, setError]           = useState<string|null>(null);
