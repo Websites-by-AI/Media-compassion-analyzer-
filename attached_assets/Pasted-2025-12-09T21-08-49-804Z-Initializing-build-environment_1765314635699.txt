@@ -1,0 +1,64 @@
+2025-12-09T21:08:49.804Z	Initializing build environment...
+2025-12-09T21:08:49.804Z	Initializing build environment...
+2025-12-09T21:08:52.380Z	Success: Finished initializing build environment
+2025-12-09T21:08:52.850Z	Cloning repository...
+2025-12-09T21:08:55.253Z	Restoring from dependencies cache
+2025-12-09T21:08:55.257Z	Restoring from build output cache
+2025-12-09T21:08:56.301Z	Detected the following tools from environment: nodejs@22.21.1, npm@10.9.2
+2025-12-09T21:08:56.302Z	Installing nodejs 22.21.1
+2025-12-09T21:09:02.041Z	Installing project dependencies: npm clean-install --progress=false
+2025-12-09T21:09:04.985Z	npm warn deprecated node-domexception@1.0.0: Use your platform's native DOMException instead
+2025-12-09T21:09:07.308Z	
+2025-12-09T21:09:07.308Z	added 137 packages, and audited 138 packages in 5s
+2025-12-09T21:09:07.308Z	
+2025-12-09T21:09:07.308Z	26 packages are looking for funding
+2025-12-09T21:09:07.309Z	  run `npm fund` for details
+2025-12-09T21:09:07.309Z	
+2025-12-09T21:09:07.309Z	2 moderate severity vulnerabilities
+2025-12-09T21:09:07.309Z	
+2025-12-09T21:09:07.309Z	To address all issues (including breaking changes), run:
+2025-12-09T21:09:07.309Z	  npm audit fix --force
+2025-12-09T21:09:07.309Z	
+2025-12-09T21:09:07.309Z	Run `npm audit` for details.
+2025-12-09T21:09:07.977Z	Executing user build command: npm run build
+2025-12-09T21:09:08.191Z	
+2025-12-09T21:09:08.191Z	> kavosh-ai@0.0.0 build
+2025-12-09T21:09:08.191Z	> tsc && vite build
+2025-12-09T21:09:08.191Z	
+2025-12-09T21:09:13.531Z	vite v5.4.21 building for production...
+2025-12-09T21:09:13.578Z	transforming...
+2025-12-09T21:09:15.050Z	✓ 56 modules transformed.
+2025-12-09T21:09:15.415Z	rendering chunks...
+2025-12-09T21:09:15.429Z	computing gzip size...
+2025-12-09T21:09:15.448Z	dist/index.html                   2.39 kB │ gzip:   1.05 kB
+2025-12-09T21:09:15.448Z	dist/assets/index-tn0RQdqM.css    0.00 kB │ gzip:   0.02 kB
+2025-12-09T21:09:15.448Z	dist/assets/index-CSTCJlKQ.js   683.75 kB │ gzip: 175.06 kB
+2025-12-09T21:09:15.448Z	✓ built in 1.90s
+2025-12-09T21:09:15.448Z	
+2025-12-09T21:09:15.448Z	(!) Some chunks are larger than 500 kB after minification. Consider:
+2025-12-09T21:09:15.448Z	- Using dynamic import() to code-split the application
+2025-12-09T21:09:15.448Z	- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+2025-12-09T21:09:15.448Z	- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+2025-12-09T21:09:15.483Z	Success: Build command completed
+2025-12-09T21:09:15.654Z	Executing user deploy command: npx wrangler deploy --assets=./dist
+2025-12-09T21:09:16.462Z	npm warn exec The following package was not found and will be installed: wrangler@4.53.0
+2025-12-09T21:09:33.987Z	
+2025-12-09T21:09:33.987Z	 ⛅️ wrangler 4.53.0
+2025-12-09T21:09:33.987Z	───────────────────
+2025-12-09T21:09:34.086Z	▲ [WARNING] Failed to match Worker name. Your config file is using the Worker name "undefined", but the CI system expected "natal-hadsony-compassion-numbeclubhouse-analysis". Overriding using the CI provided Worker name. Workers Builds connected builds will attempt to open a pull request to resolve this config name mismatch.
+2025-12-09T21:09:34.086Z	
+2025-12-09T21:09:34.086Z	
+2025-12-09T21:09:35.007Z	
+2025-12-09T21:09:35.009Z	✘ [ERROR] A compatibility_date is required when publishing. Add the following to your Wrangler configuration file:
+2025-12-09T21:09:35.009Z	
+2025-12-09T21:09:35.009Z	      ```
+2025-12-09T21:09:35.009Z	      {"compatibility_date":"2025-12-09"}
+2025-12-09T21:09:35.010Z	      ```
+2025-12-09T21:09:35.010Z	      Or you could pass it in your terminal as `--compatibility-date 2025-12-09`
+2025-12-09T21:09:35.010Z	  See https://developers.cloudflare.com/workers/platform/compatibility-dates for more information.
+2025-12-09T21:09:35.010Z	
+2025-12-09T21:09:35.010Z	
+2025-12-09T21:09:35.029Z	
+2025-12-09T21:09:35.029Z	Cloudflare collects anonymous telemetry about your usage of Wrangler. Learn more at https://github.com/cloudflare/workers-sdk/tree/main/packages/wrangler/telemetry.md
+2025-12-09T21:09:35.053Z	🪵  Logs were written to "/opt/buildhome/.config/.wrangler/logs/wrangler-2025-12-09_21-09-33_302.log"
+2025-12-09T21:09:38.515Z	Failed: error occurred while running deploy command

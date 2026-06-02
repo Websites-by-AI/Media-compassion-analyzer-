@@ -1,0 +1,83 @@
+2025-12-09T20:05:25.678Z	Initializing build environment...
+2025-12-09T20:05:27.589Z	Success: Finished initializing build environment
+2025-12-09T20:05:28.350Z	Cloning repository...
+2025-12-09T20:05:29.320Z	Restoring from dependencies cache
+2025-12-09T20:05:29.322Z	Restoring from build output cache
+2025-12-09T20:05:30.097Z	Detected the following tools from environment: nodejs@22.21.1, npm@10.9.2
+2025-12-09T20:05:30.098Z	Installing nodejs 22.21.1
+2025-12-09T20:05:35.186Z	Installing project dependencies: npm clean-install --progress=false
+2025-12-09T20:05:37.482Z	npm warn deprecated node-domexception@1.0.0: Use your platform's native DOMException instead
+2025-12-09T20:05:40.030Z	
+2025-12-09T20:05:40.030Z	added 137 packages, and audited 138 packages in 5s
+2025-12-09T20:05:40.034Z	
+2025-12-09T20:05:40.035Z	26 packages are looking for funding
+2025-12-09T20:05:40.035Z	  run `npm fund` for details
+2025-12-09T20:05:40.037Z	
+2025-12-09T20:05:40.037Z	2 moderate severity vulnerabilities
+2025-12-09T20:05:40.037Z	
+2025-12-09T20:05:40.037Z	To address all issues (including breaking changes), run:
+2025-12-09T20:05:40.038Z	  npm audit fix --force
+2025-12-09T20:05:40.038Z	
+2025-12-09T20:05:40.038Z	Run `npm audit` for details.
+2025-12-09T20:05:40.723Z	Executing user build command: npm run build
+2025-12-09T20:05:40.940Z	
+2025-12-09T20:05:40.941Z	> kavosh-ai@0.0.0 build
+2025-12-09T20:05:40.941Z	> tsc && vite build
+2025-12-09T20:05:40.941Z	
+2025-12-09T20:05:45.344Z	vite v5.4.21 building for production...
+2025-12-09T20:05:45.420Z	transforming...
+2025-12-09T20:05:46.948Z	✓ 56 modules transformed.
+2025-12-09T20:05:47.286Z	rendering chunks...
+2025-12-09T20:05:47.298Z	computing gzip size...
+2025-12-09T20:05:47.319Z	dist/index.html                   2.39 kB │ gzip:   1.05 kB
+2025-12-09T20:05:47.319Z	dist/assets/index-tn0RQdqM.css    0.00 kB │ gzip:   0.02 kB
+2025-12-09T20:05:47.319Z	dist/assets/index-CSTCJlKQ.js   683.75 kB │ gzip: 175.06 kB
+2025-12-09T20:05:47.319Z	
+2025-12-09T20:05:47.319Z	(!) Some chunks are larger than 500 kB after minification. Consider:
+2025-12-09T20:05:47.320Z	- Using dynamic import() to code-split the application
+2025-12-09T20:05:47.320Z	- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+2025-12-09T20:05:47.320Z	- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+2025-12-09T20:05:47.320Z	✓ built in 1.94s
+2025-12-09T20:05:47.362Z	Success: Build command completed
+2025-12-09T20:05:47.572Z	Executing user deploy command: npx wrangler deploy
+2025-12-09T20:05:48.660Z	npm warn exec The following package was not found and will be installed: wrangler@4.53.0
+2025-12-09T20:05:59.673Z	
+2025-12-09T20:05:59.674Z	 ⛅️ wrangler 4.53.0
+2025-12-09T20:05:59.675Z	───────────────────
+2025-12-09T20:05:59.690Z	
+2025-12-09T20:05:59.755Z	✘ [ERROR] Missing entry-point to Worker script or to assets directory
+2025-12-09T20:05:59.756Z	
+2025-12-09T20:05:59.756Z	  
+2025-12-09T20:05:59.756Z	  If there is code to deploy, you can either:
+2025-12-09T20:05:59.756Z	  - Specify an entry-point to your Worker script via the command line (ex: `npx wrangler deploy src/index.ts`)
+2025-12-09T20:05:59.756Z	  - Or create a "wrangler.jsonc" file containing:
+2025-12-09T20:05:59.756Z	  
+2025-12-09T20:05:59.756Z	  ```
+2025-12-09T20:05:59.756Z	  {
+2025-12-09T20:05:59.756Z	    "name": "worker-name",
+2025-12-09T20:05:59.756Z	    "compatibility_date": "2025-12-09",
+2025-12-09T20:05:59.756Z	    "main": "src/index.ts"
+2025-12-09T20:05:59.756Z	  }
+2025-12-09T20:05:59.756Z	  ```
+2025-12-09T20:05:59.756Z	  
+2025-12-09T20:05:59.756Z	  
+2025-12-09T20:05:59.756Z	  If are uploading a directory of assets, you can either:
+2025-12-09T20:05:59.756Z	  - Specify the path to the directory of assets via the command line: (ex: `npx wrangler deploy --assets=./dist`)
+2025-12-09T20:05:59.756Z	  - Or create a "wrangler.jsonc" file containing:
+2025-12-09T20:05:59.756Z	  
+2025-12-09T20:05:59.756Z	  ```
+2025-12-09T20:05:59.757Z	  {
+2025-12-09T20:05:59.757Z	    "name": "worker-name",
+2025-12-09T20:05:59.757Z	    "compatibility_date": "2025-12-09",
+2025-12-09T20:05:59.757Z	    "assets": {
+2025-12-09T20:05:59.757Z	      "directory": "./dist"
+2025-12-09T20:05:59.757Z	    }
+2025-12-09T20:05:59.757Z	  }
+2025-12-09T20:05:59.757Z	  ```
+2025-12-09T20:05:59.757Z	  
+2025-12-09T20:05:59.757Z	
+2025-12-09T20:05:59.757Z	
+2025-12-09T20:05:59.775Z	
+2025-12-09T20:05:59.775Z	Cloudflare collects anonymous telemetry about your usage of Wrangler. Learn more at https://github.com/cloudflare/workers-sdk/tree/main/packages/wrangler/telemetry.md
+2025-12-09T20:05:59.817Z	🪵  Logs were written to "/opt/buildhome/.config/.wrangler/logs/wrangler-2025-12-09_20-05-58_945.log"
+2025-12-09T20:05:59.961Z	Failed: error occurred while running deploy command
