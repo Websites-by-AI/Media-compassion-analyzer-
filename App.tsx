@@ -122,9 +122,14 @@ const App: React.FC = () => {
   };
 
   const handleSocialLogin = (provider: string) => {
-    console.log(`Simulating login with ${provider}`);
-    // In a real app, you'd handle the OAuth flow here
-    setCurrentUser({ name: 'News Editor' });
+    const userMap: Record<string, { name: string; avatarUrl?: string }> = {
+      demo_admin: { name: 'مدیر کاوش', avatarUrl: undefined },
+      demo_user:  { name: 'خبرنگار', avatarUrl: undefined },
+      Google:     { name: 'News Editor' },
+      Facebook:   { name: 'News Editor' },
+      Instagram:  { name: 'News Editor' },
+    };
+    setCurrentUser(userMap[provider] || { name: 'News Editor' });
     setIsLoggedIn(true);
     setIsAuthModalOpen(false);
   };
